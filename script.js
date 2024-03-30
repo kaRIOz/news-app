@@ -51,7 +51,7 @@ async function showMenu(q) {
   console.log(data);
 
   // total results
-  totalResults.textContent = `Total Search Results : ${data.totalResults}`;
+  totalResults.textContent = `Total Search Results : /${data.totalResults}/`;
 
   let notAuthor = data.articles.filter((item) => item.author);
 
