@@ -72,7 +72,7 @@ async function showMenu(q) {
             alt="mac"
             />
             <div class="card-info">
-            <h2>${title.slice(0, 50)}...</h2>
+            <h2>${shortenText(title)}...</h2>
             <p class="description">${description.slice(0, 50)}...</p>
             <footer>
               <p>${author.slice(0, 24)}</p>
@@ -94,6 +94,11 @@ async function showMenu(q) {
 let TopHeadLines = "top-headlines";
 
 showMenu(TopHeadLines);
+
+
+function shortenText(title) {
+  return title.split(" ").slice(0, 10).join(" ");
+}
 
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
